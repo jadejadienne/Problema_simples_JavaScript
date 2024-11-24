@@ -1,0 +1,20 @@
+function saudarUsuario() {
+    
+    const nome = prompt("Qual é o seu nome?");
+    
+    const idade = parseInt(prompt("Quantos anos você tem?"), 10);
+    
+    if (isNaN(idade)) {
+        alert("Por favor, insira uma idade válida.");
+        return;
+    }
+
+    // Exibe a mensagem de saudação
+    if (idade >= 18) {
+        alert(`Olá, ${nome}! Você é maior de idade.`);
+    } else {
+        alert(`Olá, ${nome}! Você é menor de idade.`);
+    }
+}
+
+saudarUsuario();
