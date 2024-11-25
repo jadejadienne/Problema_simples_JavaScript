@@ -1,0 +1,25 @@
+function encontrarMaiorNumero() {
+
+    const numero1 = parseFloat(prompt("Digite o primeiro número:"));
+    const numero2 = parseFloat(prompt("Digite o segundo número:"));
+    const numero3 = parseFloat(prompt("Digite o terceiro número:"));
+
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+        console.log("Por favor, insira apenas números válidos.");
+        return;
+    }
+
+    let maior = numero1;
+
+    if (numero2 > maior) {
+        maior = numero2;
+    }
+
+    if (numero3 > maior) {
+        maior = numero3;
+    }
+
+    console.log(`O maior número entre ${numero1}, ${numero2} e ${numero3} é: ${maior}`);
+}
+
+encontrarMaiorNumero();
