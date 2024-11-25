@@ -1,0 +1,9 @@
+function inverterString(texto) {
+  
+    return texto.split("").reverse().join("");
+}
+
+// Testando a função
+const exemplo = "JavaScript";
+const resultado = inverterString(exemplo);
+console.log(`A string invertida de "${exemplo}" é "${resultado}".`);
