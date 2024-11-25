@@ -1,0 +1,34 @@
+
+function calculadoraSimples() {
+
+    const numero1 = Number(prompt("Digite o primeiro número:"));
+    const numero2 = Number(prompt("Digite o segundo número:"));
+    const operacao = prompt("Escolha a operação: soma (+), subtração (-), multiplicação (*) ou divisão (/)");
+
+    const resultado = calcular(numero1, numero2, operacao);
+
+
+    if (resultado !== null) {
+        console.log(`O resultado da operação ${operacao} entre ${numero1} e ${numero2} é: ${resultado}`);
+    } else {
+        console.log("Operação inválida! Escolha entre +, -, * ou /. Divisão por zero também não é permitida.");
+    }
+}
+
+
+function calcular(num1, num2, op) {
+    switch (op) {
+        case "+":
+            return num1 + num2;
+        case "-":
+            return num1 - num2;
+        case "*":
+            return num1 * num2;
+        case "/":
+            return num2 !== 0 ? num1 / num2 : null; 
+        default:
+            return null; 
+    }
+}
+
+calculadoraSimples();
