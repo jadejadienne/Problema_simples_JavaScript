@@ -1,0 +1,20 @@
+function contarVogais(texto) {
+
+    const vogais = "aeiou";
+    let contador = 0;
+
+    const textoMinusculo = texto.toLowerCase();
+
+
+    for (let char of textoMinusculo) {
+        if (vogais.includes(char)) {
+            contador++;
+        }
+    }
+
+    return contador;
+}
+
+const exemplo = "jadienne!";
+const quantidadeVogais = contarVogais(exemplo);
+console.log(`A string "${exemplo}" contém ${quantidadeVogais} vogais.`);
